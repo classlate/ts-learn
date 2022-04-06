@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+  },
+  "include": [
+    "src/**/*",
+  ],
+  // "exclude": [
+  //   "src/**/1.hello.ts",
+  // ],
+}
