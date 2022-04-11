@@ -12,6 +12,12 @@
 - undefined
 - symbol
 
+#### 特殊
+
+- any
+- unknown
+- never
+
 ### 数组类型
 
 > 原始类型 + []
@@ -88,29 +94,58 @@
 > 常配合联合类型应用，表示在一组明确值范围内可取的值
 
 - 
-
+  
   ```ts
     let foo: 1 | 2 | 3 | 4 = 1
   ```
 
-## 类型自定义
-
-> 对一组类型的集合声明
+## 类型声明
 
 ### 接口
 
-> 常用于对象  
+> 对一组类型的集合声明，常用于对象  
 > 声明关键字 `interface` 
 > 可扩展继承，关键字 `extends`
 
-### 类型别名
+- 
+  
+  ```ts
+    interface Person {
+      name: string
+      age: number
+      say(msg: string): string
+    }
+  ```
 
-> 声明关键字 `type`
+### 别名
+
+> 当作变量用于对类型的存储  
+> 声明关键字 `type`  
+
+- 
+  
+  ```ts
+    type num = 1 | 2 | 3 | 4
+    type Person = {
+      name: string
+      // ...
+    }
+  ```
 
 ### 枚举
 
 > 解析后会额外生成代码以支持，推荐使用字面量类型 + 联合类型替代使用  
-> 声明关键字 `enum`  
+> 声明关键字 `enum`，`,`分隔
+
+- 
+  
+  ```ts
+    enum Gender {
+      MAN,
+      WOMAN
+    }
+    const he: Gender = Gender.MAN
+  ```
 
 ## 类型推论
 

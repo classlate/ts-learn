@@ -7,11 +7,13 @@
 
 // 枚举：定义一组命名常量
 
-// 1. 数字美剧（默认)：枚举成员是数字的枚举
+// 1. 数字枚举（默认)：枚举成员是数字的枚举
+// > 默认从0 开始升序
 enum Direction { Up, Down, Right, Left }
 
 // 类似于js中的对象，直接通过 . 语法访问枚举的成员
 const dir: Direction = Direction.Up
+console.log(dir) // 0
 
 // 枚举成员设置初始值
 enum Direction2 { Up = 12, Down, Right, Left }
